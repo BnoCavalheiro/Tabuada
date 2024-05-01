@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "desenvolver tabuada",
   "main": "index.js",
-  "type":"module",
+  "type": "module",
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/BnoCavalheiro/Tabuada/issues"
   },
-  "homepage": "https://github.com/BnoCavalheiro/Tabuada#readme"
+  "homepage": "https://github.com/BnoCavalheiro/Tabuada#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
 }
