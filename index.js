@@ -4,6 +4,20 @@ const host = '0.0.0.0';
 const porta=5000;
 const app = express();
 
+function retornaPaginaInicial(requisicao, resposta){
+    resposta.write('<!DOCTYPE html>');
+    resposta.write('<html>');
+    resposta.write('<head>');
+    resposta.write('<meta charset="utf-8">');
+    resposta.write('<title>Exibir Tabuada</title>');
+    resposta.write('</head>');
+    resposta.write('<body>');
+    resposta.write('<h1>Exibir Tabuada</h1>');
+    resposta.write('</body>');
+    resposta.write('</html>');
+    resposta.end();
+};
+
 function exibirTabuada(requisicao, resposta) {
     let tabuada = parseInt(requisicao.query.tabuada);
     let sequencia = parseInt(requisicao.query.sequencia) || 10;
@@ -30,6 +44,7 @@ function exibirTabuada(requisicao, resposta) {
     resposta.end();
 }
 
+app.get("/",retornaPaginaInicial);
 app.get("/tabuada",exibirTabuada);
 app.listen(porta, host, () =>{
     console.log("Servidor está executando em http://" + host + ":" + porta);
