@@ -9,7 +9,8 @@ function retornaPaginaInicial(requisicao, resposta){
     resposta.write('<html>');
     resposta.write('<head>');
     resposta.write('<meta charset="utf-8">');
-    resposta.write('<title>Exibir Tabuada</title>');
+    resposta.write('<title>Exibir Tabuada </title>');
+    resposta.write('<h1>Informe o parâmetro tabuada na url:  http://localhost:5000/tabuada?tabuada=5&sequencia=10')
     resposta.write('</head>');
     resposta.write('<body>');
     resposta.write('<h1>Exibir Tabuada</h1>');
